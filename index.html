@@ -10,7 +10,8 @@
         align-items: center;
         height: 100px;
         font-size: 50px;
-        background-color: #24A4AA;
+        background-color: #128290;
+        animation-name: fadein;
       }
       p {
         margin-top: 0px;
@@ -21,9 +22,23 @@
       body {
         margin: 0px;
       }
+      @keyframes fadein {
+        0% {opacity: 0;}
+        10% {opacity: 0.1;}
+        20% {opacity: 0.2;}
+        30% {opacity: 0.3;}
+        40% {opacity: 0.4;}
+        50% {opacity: 0.5;}
+        60% {opacity: 0.6;}
+        70% {opacity: 0.7;}
+        80% {opacity: 0.8;}
+        90% {opacity: 0.9;}
+        100% {opacity: 1;}
+  }
     </style>
   </head>
   <body>
       <p id="title">LazyHomework</p>
+
   </body>
 </html>
