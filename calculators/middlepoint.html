@@ -21,11 +21,15 @@
         var x2 = document.getElementById("x2").value;
         var y1 = document.getElementById("y1").value;
         var y2 = document.getElementById("y2").value;
+        x1 = Number(x1);
+        x2 = Number(x2);
+        y1 = Number(y1);
+        y2 = Number(y2);
         var x3 = x1 + x2;
         var newx = x3/2;
         var y3 = y1 + y2;
         var newy = y3/2;
-        document.getElementById("outputx").innerHTML = newx;
+        document.getElementById("outputx").innerHTML = `X-${newx}`;
         document.getElementById("outputy").innerHTML = `Y=${newy}`;
       }
     </script>
