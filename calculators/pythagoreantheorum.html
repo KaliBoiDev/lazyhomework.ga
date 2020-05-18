@@ -2,6 +2,21 @@
   <head>
   </head>
   <body>
-    <p>test</p>
+    <label for="numa">A=</label>
+    <input type="number" id="numa" name="numa">
+    <label for="numb">B=</label>
+    <input type="number" id="numb" name="numb">
+    <input type="button" value="Submit" onclick="calc()">
+    <p id ="output"></p>
+    <script>
+      function calc(){
+        var a = document.getElementById("numa").value;
+        var b = document.getElementById("numb").value;
+        a = a*a;
+        b = b*b;
+        var c = a+b;
+        document.getElementById("output").innerHTML = c;
+      }
+    </script>
   </body>
 <html>
