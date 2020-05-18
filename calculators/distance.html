@@ -1,0 +1,36 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <form onsubmit="return false">
+      <label for="x1">X1=</label>
+      <input type="number" id="x1" name="x1">
+      <label for="x2">X2=</label>
+      <input type="number" id="x2" name="x2">
+      <label for="y1">Y1=</label>
+      <input type="number" id="y1" name="y1">
+      <label for="y2">Y2=</label>
+      <input type="number" id="y2" name="y2">
+      <input type="submit" value="Submit" onclick="calc();">
+    </form>
+    <p id="distance"></p>
+    <script type="text/javascript">
+      function calc(){
+        var x1 = document.getElementById("x1").value;
+        var x2 = document.getElementById("x2").value;
+        var y1 = document.getElementById("y1").value;
+        var y2 = document.getElementById("y2").value;
+        x1 = Number(x1);
+        x2 = Number(x2);
+        y1 = Number(y1);
+        y2 = Number(y2);
+        var x = x2-x1;
+        var y = y2-y1;
+        x = x*x;
+        y = y*y;
+        var d = x+y;
+        document.getElementById("distance").value = `D=${d}`;
+      }
+    </script>
+  </body>
+</html>
