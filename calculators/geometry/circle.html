@@ -6,6 +6,7 @@
     <form onsubmit="return false">
       <label for="r">R=</label>
       <input type="number" id="r" name="r">
+      <label for="accurateval">Use accurate version of Pi?(if left blank 3.14 will be used)</label>
       <input type="checkbox" id="accurateval" name="accurateval">
       <input type="submit" value="Submit" onclick="calc();">
     </form>
@@ -14,10 +15,14 @@
       function calc(){
         var r = document.getElementById("r2").value;
         r = r*r;
-        var test = document.getElementById("accurateval");
-        alert(test);
-        var a = r*3.14;
-        document.getElementById("a").innerHTML = a;
+        var check = document.getElementById("accurateval").value;
+        if (check === "on"){
+          var pi = Math.PI;
+        }else {
+          var pi = 3.14;
+        }
+        var a = r*pi;
+        document.getElementById("a").innerHTML = `A=${a}`;
       }
     </script>
   </body>
