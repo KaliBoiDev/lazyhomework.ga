@@ -2,18 +2,20 @@
   <head>
   </head>
   <body>
+    <h1>Accurate Version(uses actual pi)</h1>
     <form onsubmit="return false">
       <label for="r">R=</label>
       <input type="number" id="r" name="r">
+      <input type="checkbox" id="accurateval" name="accurateval">
       <input type="submit" value="Submit" onclick="calc();">
     </form>
     <p id="a"></p>
     <script>
       function calc(){
-        var r = document.getElementById("r").value;
+        var r = document.getElementById("r2").value;
         r = r*r;
-        var pi = Math.PI;
-        var a = r*pi;
+        alert(document.getElementById("accurateval"));
+        var a = r*3.14;
         document.getElementById("a").innerHTML = a;
       }
     </script>
